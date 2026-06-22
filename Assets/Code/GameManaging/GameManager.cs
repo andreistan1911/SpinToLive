@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
             //    break;
 
             case GameState.Playing:
-                actions.StartPlaying();
+                GameStateActions.StartPlaying();
                 break;
 
             //case GameState.LevelUpMenu:
