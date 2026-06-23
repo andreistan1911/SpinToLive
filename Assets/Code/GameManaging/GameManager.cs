@@ -6,7 +6,6 @@ public class GameManager : MonoBehaviour
 
     private static GameManager instance;
 
-    private static GameStateActions actions;
   
     private void Awake()
     {
@@ -17,8 +16,6 @@ public class GameManager : MonoBehaviour
     {
         State = GameState.MainMenu;
         EnterState(State);
-
-        actions = GameStateActions.Instance;
     }
 
     public static GameManager Instance
