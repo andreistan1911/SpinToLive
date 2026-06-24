@@ -44,6 +44,6 @@ public static class Constants
         public const float Health = 20f;
         public const float Speed = 2f;
         public const float Damage = 1f;
-        public readonly static ExperienceDrop Exp = new LowExperienceDrop();
+        public readonly static LowExperienceDrop Exp;
     }
 }

@@ -45,9 +45,11 @@ public class Razor : Weapon
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Collision detected with: " + collision.gameObject.name);
-        if (collision.gameObject.GetComponent<Enemy>() != null)
+        Enemy enemy = collision.gameObject.GetComponent<Enemy>();
+
+        if (enemy != null)
         {
+            enemy.TakeDamage(Constants.Razor.Damage);
             isAlive = false;
         }
     }

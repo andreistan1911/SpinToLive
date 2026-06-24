@@ -7,7 +7,8 @@ public abstract class Enemy : MonoBehaviour
 
     protected abstract void SetStats();
 
-    protected class Stats
+    [System.Serializable]
+    public class Stats
     {
         public float Health;
         public float Speed;
@@ -43,7 +44,7 @@ public abstract class Enemy : MonoBehaviour
         }
     }
 
-    protected Stats stats;
+    public Stats stats;
 
     private void OnEnable()
     {
