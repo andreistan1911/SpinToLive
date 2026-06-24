@@ -1,15 +1,17 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(PlayerAnimationController))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-
+    private PlayerAnimationController animationController;
     private Rigidbody2D rigidBody;
     private Vector2 movement;
 
     private void Start()
     {
+        animationController = GetComponent<PlayerAnimationController>();
         rigidBody = GetComponent<Rigidbody2D>();
 
         // TODO: REMOVE FROM HERE
@@ -19,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private void Update()
     {
         GetInput();
-
+        animationController.UpdateMovement(movement);
 
         rigidBody.linearVelocity = Constants.SpeedCoef * Constants.Player.MoveSpeed * movement;
     }
