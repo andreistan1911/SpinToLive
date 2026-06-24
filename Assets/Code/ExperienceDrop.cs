@@ -13,7 +13,7 @@ public abstract class ExperienceDrop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // TODO
+        Debug.Log("ExperienceDrop collided with: " + collision.gameObject.name);
         PlayerExperience playerExperience = collision.GetComponent<PlayerExperience>();
 
         if (playerExperience == null)

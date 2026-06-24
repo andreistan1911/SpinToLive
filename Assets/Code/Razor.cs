@@ -6,10 +6,18 @@ public class Razor : Weapon
 
     override public void Activate()
     {
-        Vector3 targetPosition = FindTheClosestEnemy().transform.position;
-        direction = (targetPosition - transform.position).normalized;
+        Enemy closestEnemy = FindTheClosestEnemy();
+
+        if (closestEnemy == null)
+        {
+            // No enemies found, destroy the razor immediately
+            Destroy(gameObject);
+            return;
+        }
 
         isAlive = true;
+        direction = (closestEnemy.transform.position - transform.position).normalized;
+
         Destroy(gameObject, Constants.Razor.Lifetime);
     }
 
@@ -20,7 +28,7 @@ public class Razor : Weapon
 
     override protected void UpdateLocation()
     {
-        transform.Translate(Constants.Razor.Speed * Time.deltaTime * direction);
+        transform.Translate(Constants.SpeedCoef * Constants.Razor.Speed * Time.deltaTime * direction);
     }
 
     // region Private Methods

@@ -31,6 +31,14 @@ public static class Constants
         int.MaxValue
     };
 
+    public const float SpeedCoef = 0.05f;
+
+    public static class Player
+    {
+        public const float MoveSpeed = 10f;
+        public const float MaxHealth = 100f;
+    }
+
     public static class Razor
     {
         public const float Cooldown = 2f;

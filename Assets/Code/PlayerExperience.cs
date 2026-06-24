@@ -37,5 +37,7 @@ internal class PlayerExperience : MonoBehaviour
             currentExperience -= experienceRequired;
             experienceRequired = Constants.PlayerLevelExperienceRequirements[++currentLevel];
         }
+
+        Debug.Log("Adding Experience: " + bonusExp + "\nCurrent Level: " + currentLevel + ", Current Experience: " + currentExperience + " / " + experienceRequired);
     }
 }

@@ -11,8 +11,7 @@ public class EnemyMovement : MonoBehaviour
 
     private void Start()
     {
-        moveSpeed = Constants.Square.Speed;
-
+        moveSpeed = GetComponent<Enemy>().stats.Speed;
         rigidBody = GetComponent<Rigidbody2D>();
         player = FindAnyObjectByType<PlayerMovement>()?.transform;
 
@@ -23,6 +22,6 @@ public class EnemyMovement : MonoBehaviour
     private void Update()
     {
         Vector2 direction = (player.position - transform.position).normalized;
-        rigidBody.linearVelocity = direction * moveSpeed;
+        rigidBody.linearVelocity = Constants.SpeedCoef * moveSpeed * direction;
     }
 }

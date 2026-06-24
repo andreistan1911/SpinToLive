@@ -4,8 +4,6 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 5f;
 
     private Rigidbody2D rigidBody;
     private Vector2 movement;
@@ -23,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
         GetInput();
 
 
-        rigidBody.linearVelocity = movement * moveSpeed;
+        rigidBody.linearVelocity = Constants.SpeedCoef * Constants.Player.MoveSpeed * movement;
     }
 
     private void GetInput()
