@@ -1,33 +1,29 @@
 ﻿using UnityEngine;
 
-public class StraightLineWeapon : Weapon
+public class Razor : Weapon
 {
-    [SerializeField]
-    private float speedCoefficient = 10f;
-
-    [SerializeField]
-    private float maxLifeTime = 30f;
-
-    private Enemy closestEnemy;
-    private bool isAlive = false;
+    private Vector2 direction;
 
     override public void Activate()
     {
+        Vector3 targetPosition = FindTheClosestEnemy().transform.position;
+        direction = (targetPosition - transform.position).normalized;
+
         isAlive = true;
-        closestEnemy = FindTheClosestEnemy();
-        Destroy(gameObject, maxLifeTime);
+        Destroy(gameObject, Constants.Razor.Lifetime);
     }
 
     override protected void Deactivate()
     {
-        DestroyObjectOnCollideWithEnemy();
-        // It also destroys itself after maxLifeTime seconds
+        // Object is destroyed when it collides with an enemy or after maxLifeTime seconds, so no additional deactivation logic is needed here.
     }
 
     override protected void UpdateLocation()
     {
-        MoveTowardsEnemy(closestEnemy);
+        transform.Translate(Constants.Razor.Speed * Time.deltaTime * direction);
     }
+
+    // region Private Methods
 
     private Enemy FindTheClosestEnemy()
     {
@@ -49,27 +45,12 @@ public class StraightLineWeapon : Weapon
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log("Collision detected with: " + collision.gameObject.name);
         if (collision.gameObject.GetComponent<Enemy>() != null)
         {
             isAlive = false;
         }
     }
 
-
-    private void DestroyObjectOnCollideWithEnemy()
-    {
-        if (!isAlive)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    private void MoveTowardsEnemy(Enemy enemy)
-    {
-        if (enemy != null)
-        {
-            Vector2 direction = (enemy.transform.position - transform.position).normalized;
-            transform.Translate(speedCoefficient * Time.deltaTime * direction);
-        }
-    }
+    // endregion
 }

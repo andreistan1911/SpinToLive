@@ -1,18 +1,19 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Enemy))]
 [RequireComponent(typeof(Rigidbody2D))]
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField]
-    private float moveSpeed = 3f;
+    private float moveSpeed;
 
     private Transform player;
     private Rigidbody2D rigidBody;
 
     private void Start()
     {
-        rigidBody = GetComponent<Rigidbody2D>();
+        moveSpeed = Constants.Square.Speed;
 
+        rigidBody = GetComponent<Rigidbody2D>();
         player = FindAnyObjectByType<PlayerMovement>()?.transform;
 
         if (player == null)

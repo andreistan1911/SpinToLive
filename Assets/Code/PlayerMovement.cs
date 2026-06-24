@@ -13,6 +13,9 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rigidBody = GetComponent<Rigidbody2D>();
+
+        // TODO: REMOVE FROM HERE
+        PrefabLoader.Load();
     }
 
     private void Update()
