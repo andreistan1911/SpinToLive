@@ -6,7 +6,7 @@ internal class PlayerExperience : MonoBehaviour
     private int currentExperience;
     private int experienceRequired;
 
-    private void Start() 
+    private void Awake() 
     {
         currentLevel = 1;
         currentExperience = 0;
@@ -37,7 +37,5 @@ internal class PlayerExperience : MonoBehaviour
             currentExperience -= experienceRequired;
             experienceRequired = Constants.PlayerLevelExperienceRequirements[++currentLevel];
         }
-
-        Debug.Log("Adding Experience: " + bonusExp + "\nCurrent Level: " + currentLevel + ", Current Experience: " + currentExperience + " / " + experienceRequired);
     }
 }

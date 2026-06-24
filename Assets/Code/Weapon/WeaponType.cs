@@ -1,4 +1,5 @@
 ﻿public enum WeaponType
 {
-    StraightLine
+    Razor,
+    Planet
 }

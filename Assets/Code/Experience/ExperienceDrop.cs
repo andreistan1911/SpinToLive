@@ -6,6 +6,16 @@ public abstract class ExperienceDrop : MonoBehaviour
 {
     protected int ExperiencePoints { get; private set; }
 
+    private ExperienceUI experienceUI;
+
+    private void Start()
+    {
+        experienceUI = FindAnyObjectByType<ExperienceUI>();
+
+        if (experienceUI == null)
+            Debug.LogError("ExperienceUI not found in the scene. Please ensure there is an ExperienceUI component in the scene.");
+    }
+
     protected void SetExperiencePoints(int points)
     {
         ExperiencePoints = points;
@@ -13,14 +23,14 @@ public abstract class ExperienceDrop : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("ExperienceDrop collided with: " + collision.gameObject.name);
         PlayerExperience playerExperience = collision.GetComponent<PlayerExperience>();
 
         if (playerExperience == null)
             return;
 
         playerExperience.AddExperience(ExperiencePoints);
-
+        experienceUI.UpdateInfo();
+        
         Destroy(gameObject);
     }
 }

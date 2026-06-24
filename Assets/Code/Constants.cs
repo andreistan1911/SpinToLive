@@ -41,10 +41,20 @@ public static class Constants
 
     public static class Razor
     {
+        public const float Lifetime = 5f;
         public const float Cooldown = 2f;
         public const float Speed = 10f;
-        public const float Lifetime = 5f;
         public const float Damage = 10f;
+    }
+
+    public static class Planet
+    {
+        public const float LifeTime = 5f;
+        public const float Cooldown = LifeTime + 3f;
+        public const float Omega = Mathf.PI;
+        public const float Damage = 5f;
+        public const float Radius = 150f;
+        public const int NumberOfPlanets = 3;
     }
 
     public static class Square

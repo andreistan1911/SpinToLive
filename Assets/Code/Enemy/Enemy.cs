@@ -66,7 +66,6 @@ public abstract class Enemy : MonoBehaviour
         // TODO: Add visual feedback for taking damage (e.g., flashing red, playing a sound, etc.)
         stats.Health -= damage;
 
-        Debug.Log($"{gameObject.name} took {damage} damage. Remaining health: {stats.Health}");
         if (stats.Health <= 0)
         {
             Die();

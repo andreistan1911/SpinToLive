@@ -5,10 +5,9 @@ public static class PrefabLoader
     public static Square Square { get ; private set; }
 
     public static Razor Razor { get; private set; }
+    public static Planet Planet { get; private set; }
 
     public static LowExperienceDrop LowExperienceDrop { get; private set; }
-
-    // TODO: Add more prefabs here
 
     private static bool isLoaded = false;
 
@@ -22,20 +21,10 @@ public static class PrefabLoader
         Square = Resources.Load<GameObject>("Prefabs/Enemies/Square").GetComponent<Square>();
 
         Razor = Resources.Load<Razor>("Prefabs/Weapons/Razor").GetComponent<Razor>();
+        Planet = Resources.Load<Planet>("Prefabs/Weapons/Planet").GetComponent<Planet>();
 
         LowExperienceDrop = Resources.Load<LowExperienceDrop>("Prefabs/Experience/LowExp").GetComponent<LowExperienceDrop>();
 
         isLoaded = true;
-        CheckIfEverythingLoadedSuccesfully();
-    }
-
-    private static void CheckIfEverythingLoadedSuccesfully()
-    {
-        if (Square == null)
-            Debug.LogError("Failed to load Square prefab.");
-        if (Razor == null)
-            Debug.LogError("Failed to load Razor prefab.");
-        if(LowExperienceDrop == null)
-            Debug.LogError("Failed to load LowExperienceDrop prefab.");
     }
 }
