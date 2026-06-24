@@ -1,31 +1,31 @@
 fileFormatVersion: 2
-guid: 36f3b90b86c426944b7fb98910f7545d
+guid: a4c83b2da5682b142a24e43ed25bd078
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6158477557285509181
-    second: spr_player_hunch_front_0
+      213: 7693396659629048270
+    second: spr_player_idle_back_0
   - first:
-      213: -8271547043662391222
-    second: spr_player_hunch_front_1
+      213: 7630113173634911087
+    second: spr_player_idle_back_1
   - first:
-      213: 2916597674581806754
-    second: spr_player_hunch_front_2
+      213: -1931163149804414601
+    second: spr_player_idle_back_2
   - first:
-      213: 1305458943910731619
-    second: spr_player_hunch_front_3
+      213: -1732103825247467407
+    second: spr_player_idle_back_3
   - first:
-      213: -7611244825138570726
-    second: spr_player_hunch_front_4
+      213: -6066562052114844849
+    second: spr_player_idle_back_4
   - first:
-      213: 6633017372864271768
-    second: spr_player_hunch_front_5
+      213: -3264584554408969437
+    second: spr_player_idle_back_5
   - first:
-      213: -3493120989666817189
-    second: spr_player_hunch_front_6
+      213: 6705160621710486549
+    second: spr_player_idle_back_6
   - first:
-      213: -1578245863448409006
-    second: spr_player_hunch_front_7
+      213: 5168924663305473274
+    second: spr_player_idle_back_7
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -134,13 +134,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spr_player_hunch_front_0
+      name: spr_player_idle_back_0
       rect:
         serializedVersion: 2
-        x: 33
-        y: 3
-        width: 42
-        height: 108
+        x: 29
+        y: 0
+        width: 50
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +149,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c728c86a41b88aa0800000000000000
-      internalID: -6158477557285509181
+      spriteID: ec1cd55208f64ca60800000000000000
+      internalID: 7693396659629048270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hunch_front_1
+      name: spr_player_idle_back_1
       rect:
         serializedVersion: 2
-        x: 141
-        y: 3
-        width: 42
-        height: 99
+        x: 137
+        y: 0
+        width: 50
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a48129fc9cf853d80800000000000000
-      internalID: -8271547043662391222
+      spriteID: f6b898e518b93e960800000000000000
+      internalID: 7630113173634911087
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hunch_front_2
+      name: spr_player_idle_back_2
       rect:
         serializedVersion: 2
-        x: 249
-        y: 3
-        width: 42
-        height: 97
+        x: 245
+        y: 0
+        width: 50
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2aecd2ad126d97820800000000000000
-      internalID: 2916597674581806754
+      spriteID: 7795594d8512335e0800000000000000
+      internalID: -1931163149804414601
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hunch_front_3
+      name: spr_player_idle_back_3
       rect:
         serializedVersion: 2
-        x: 357
-        y: 3
-        width: 42
-        height: 95
+        x: 353
+        y: 0
+        width: 50
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 36fd7ac2efbed1210800000000000000
-      internalID: 1305458943910731619
+      spriteID: 178870e7fb456f7e0800000000000000
+      internalID: -1732103825247467407
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hunch_front_4
+      name: spr_player_idle_back_4
       rect:
         serializedVersion: 2
-        x: 465
-        y: 3
-        width: 42
-        height: 91
+        x: 461
+        y: 0
+        width: 50
+        height: 112
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +237,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1ad51b582d6f5690800000000000000
-      internalID: -7611244825138570726
+      spriteID: f4374d3a4fd3fcba0800000000000000
+      internalID: -6066562052114844849
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hunch_front_5
+      name: spr_player_idle_back_5
       rect:
         serializedVersion: 2
-        x: 573
-        y: 3
-        width: 42
-        height: 85
+        x: 569
+        y: 0
+        width: 50
+        height: 113
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,20 +259,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 895d19a48263d0c50800000000000000
-      internalID: 6633017372864271768
+      spriteID: 32bf93fe4add1b2d0800000000000000
+      internalID: -3264584554408969437
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hunch_front_6
+      name: spr_player_idle_back_6
       rect:
         serializedVersion: 2
-        x: 681
-        y: 3
-        width: 42
-        height: 81
+        x: 677
+        y: 0
+        width: 50
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,20 +281,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b5bc27d97f0f58fc0800000000000000
-      internalID: -3493120989666817189
+      spriteID: 51cadfa5f048d0d50800000000000000
+      internalID: 6705160621710486549
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: spr_player_hunch_front_7
+      name: spr_player_idle_back_7
       rect:
         serializedVersion: 2
-        x: 787
-        y: 3
-        width: 46
-        height: 77
+        x: 785
+        y: 0
+        width: 50
+        height: 114
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -303,8 +303,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 25c8de4cfb1f81ae0800000000000000
-      internalID: -1578245863448409006
+      spriteID: afc041b5895bbb740800000000000000
+      internalID: 5168924663305473274
       vertices: []
       indices: 
       edges: []
@@ -323,14 +323,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spr_player_hunch_front_0: -6158477557285509181
-      spr_player_hunch_front_1: -8271547043662391222
-      spr_player_hunch_front_2: 2916597674581806754
-      spr_player_hunch_front_3: 1305458943910731619
-      spr_player_hunch_front_4: -7611244825138570726
-      spr_player_hunch_front_5: 6633017372864271768
-      spr_player_hunch_front_6: -3493120989666817189
-      spr_player_hunch_front_7: -1578245863448409006
+      spr_player_idle_back_0: 7693396659629048270
+      spr_player_idle_back_1: 7630113173634911087
+      spr_player_idle_back_2: -1931163149804414601
+      spr_player_idle_back_3: -1732103825247467407
+      spr_player_idle_back_4: -6066562052114844849
+      spr_player_idle_back_5: -3264584554408969437
+      spr_player_idle_back_6: 6705160621710486549
+      spr_player_idle_back_7: 5168924663305473274
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
