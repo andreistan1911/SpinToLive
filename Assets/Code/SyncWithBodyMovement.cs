@@ -59,8 +59,6 @@ public class SyncWithBodyMovement : MonoBehaviour
         faceSpriteRenderer.enabled =
             currentState.IsName("Idle Front") ||
             currentState.IsName("Walking Front");
-
-        Debug.Log(faceSpriteRenderer.enabled);
     }
 
     private Vector3 SyncWithHeadPosition(bool isMoving)
