@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
         PrefabLoader.Load();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         GetInput();
         animationController.UpdateMovement(movement);

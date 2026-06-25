@@ -3,6 +3,7 @@ using UnityEngine;
 public class PlayerAnimationController : MonoBehaviour
 {
     private Animator animator;
+    private SpriteRenderer faceRenderer;
 
     private bool facingFront = true;
 
@@ -12,6 +13,7 @@ public class PlayerAnimationController : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+        faceRenderer = transform.Find("Face").GetComponent<SpriteRenderer>();
     }
 
     public void UpdateMovement(Vector2 movement)
@@ -22,6 +24,8 @@ public class PlayerAnimationController : MonoBehaviour
 
         if (moving)
         {
+            faceRenderer.enabled = false;
+
             if (movement.y > 0)
             {
                 facingFront = false;

@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(Animator))]
 public class BlinkController : MonoBehaviour
 {
     private Animator animator;
@@ -21,7 +22,7 @@ public class BlinkController : MonoBehaviour
     {
         while (true)
         {
-            float waitTime = Random.Range(2f, 5f);
+            float waitTime = Random.Range(3f, 8f);
 
             yield return new WaitForSeconds(waitTime);
 
